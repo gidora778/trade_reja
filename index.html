@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foiz Hisoblagich</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Foiz Hisoblagich</h1>
+        <form id="interestForm" onsubmit="calculateInterest(); return false;">
+            <div class="form-group">
+                <label for="deposit">Depozit ($):</label>
+                <input type="number" id="deposit" name="deposit" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="days">Kunlar soni:</label>
+                <input type="number" id="days" name="days" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="interest">Kunlik foiz (%):</label>
+                <input type="number" id="interest" name="interest" step="0.01" min="0" required>
+            </div>
+            <button type="submit">Hisobla</button>
+        </form>
+        
+        <div class="table-container">
+            <table id="resultTable">
+                <thead>
+                    <tr>
+                        <th>Kun</th>
+                        <th>Depozit ($)</th>
+                        <th>Qo'shilgan Foiz ($)</th>
+                        <th>Jami Summa ($)</th>
+                        <th>Bajarilishi kerak</th> <!-- Yangi katak nomi -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Natijalar shu yerda joylashadi -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="finalReport" class="final-report">
+            <!-- Yakuniy hisobot shu yerda joylashadi -->
+        </div>
+    </div>
+
+    <div class="animated-box"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

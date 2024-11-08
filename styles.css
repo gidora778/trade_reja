@@ -1,0 +1,205 @@
+/* Asosiy dizayn */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/background.jpg'); /* Orqa fon rasmi */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    perspective: 1000px; /* 3D effekt uchun perspektiva */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.table-container {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: slideIn 1s ease-out;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: right;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.final-report {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.final-report h2 {
+    margin-top: 0;
+    color: #28a745;
+}
+
+.final-report p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* 3D animatsiya */
+.animated-box {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    animation: rotate 10s infinite linear;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+}
+
+/* 3D rotatsiya animatsiyasi */
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Animatsiyalar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobil moslashtirish */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .final-report p {
+        font-size: 14px;
+    }
+}
+
+/* Bo'sh katak o'lchamini kichikroq qilish */
+table input[type="text"] {
+    width: 80px;
+    padding: 4px;
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+}
